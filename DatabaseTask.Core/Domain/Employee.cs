@@ -25,10 +25,13 @@ namespace DatabaseTask.Core.Domain
         public ICollection<Email> Emails { get; set; } = new List<Email>();
 
         // Navigation property to represent the relationship with SalesOrders
-        public ICollection<SalesOrder> SalesOrders{ get; set; } = new List<SalesOrder>();
+        //public ICollection<SalesOrder> SalesOrders{ get; set; } = new List<SalesOrder>();
 
         // Navigation property to represent the relationship with Campaigns
         public ICollection<Campain> Campains { get; set; } = new List<Campain>();
+
+        // Navigation property to represent the relationship with Orders
+        public ICollection<Order> Orders { get; set; } = new List<Order>();
 
 
         /// TEINE HINDELINE HARJUTUS

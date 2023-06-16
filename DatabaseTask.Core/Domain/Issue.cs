@@ -14,6 +14,7 @@ namespace DatabaseTask.Core.Domain
         public Offer Offer { get; set; }
         public Guid OfferId { get; set; }
 
-       
+
+
     }
 }

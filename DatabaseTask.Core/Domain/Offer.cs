@@ -13,7 +13,7 @@ namespace DatabaseTask.Core.Domain
         public int Amount { get; set; }
         public string Frequency { get; set; }
         public int PeriodByWeek { get; set; }
-        public string? Comment { get; set; }
+      
         public Client Client { get; set; }
         public Guid ClientId { get; set; }
         public Employee Employee { get; set; }

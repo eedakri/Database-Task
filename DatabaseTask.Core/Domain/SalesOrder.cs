@@ -12,10 +12,13 @@ namespace DatabaseTask.Core.Domain
         public string Frequency { get; set; }
         public bool AautomaticRenew { get; set; }
         public string? Comment { get; set; }
-        public Employee Employee { get; set; }
-        public Guid EmployeeId { get; set; }
+        // võõrvõtmed
+      
         public Email Email { get; set; }
         public Guid EmailId { get; set; }
-        ///Võõrvõtmeid juurde panna
+
+
+        // Navigation property to represent the relationship with OrderSending
+        public ICollection<OrderSending> OrderSending { get; set; } = new List<OrderSending>();
     }
 }

@@ -15,6 +15,12 @@ namespace DatabaseTask.Core.Domain
         public int ContactPhone { get; set; }
         public string ContactEmail { get; set; }
         public string? Comment {get; set;}
+
+        // Navigation property to represent the relationship with Orders
+        public ICollection<Order> Orders { get; set; } = new List<Order>();
+
+        // Navigation property to represent the relationship with OrderSending
+        public ICollection<OrderSending> OrderSending { get; set; } = new List<OrderSending>();
     }
     
 }
