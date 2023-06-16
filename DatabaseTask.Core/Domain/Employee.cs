@@ -17,6 +17,18 @@ namespace DatabaseTask.Core.Domain
         public DateTime End { get; set; }
         public string? Comment { get; set; }
 
+        // Foreign key properties to reference with email
+        public Email Email{ get; set; }
+        public Guid EmailId { get; set; }
+
+        // Navigation property to represent the relationship with Emails
+        public ICollection<Email> Emails { get; set; } = new List<Email>();
+
+        // Navigation property to represent the relationship with SalesOrders
+        public ICollection<SalesOrder> SalesOrders{ get; set; } = new List<SalesOrder>();
+
+        // Navigation property to represent the relationship with Campaigns
+        public ICollection<Campain> Campains { get; set; } = new List<Campain>();
 
 
         /// TEINE HINDELINE HARJUTUS
